@@ -62,6 +62,30 @@
             
             <div id="vid_62e0b5f5c0e469000aa6d906" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_62e0b5f5c0e469000aa6d906" src="https://images.converteai.net/bb1561f3-9e12-4718-bd1f-94ca800fc9db/players/62e0b5f5c0e469000aa6d906/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_62e0b5f5c0e469000aa6d906" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_62e0b5f5c0e469000aa6d906">var s=document.createElement("script");s.src="https://scripts.converteai.net/bb1561f3-9e12-4718-bd1f-94ca800fc9db/players/62e0b5f5c0e469000aa6d906/player.js",s.async=!0,document.head.appendChild(s);</script>           
            
+             <br>
+             <div id="viewers">
+  <span></span>  <canvas style="margin-left:1em;margin-right:1em;background-color: #00ff00;width:10px;height:10px;border-radius:100%"></canvas>pessoas estão assistindo a esse vídeo agora! 
+</div>
+<script>
+  document.querySelectorAll("#viewers span")[0].innerHTML = getUsersView();
+
+  setInterval(() => {
+    updatesUsersView();
+  }, 2500);
+
+  function getUsersView() {
+    return Math.floor(Math.random() * (Math.floor(910) - Math.ceil(690))) + Math.ceil(690);
+  }
+
+  function updatesUsersView() {
+    var currentUsers = document.querySelectorAll("#viewers span")[0].innerHTML;
+    var users = Math.floor(Math.random() * (Math.floor(40) - Math.ceil(-40))) + Math.ceil(-40);
+    currentUsers = parseInt(currentUsers) < 690 ? parseInt(currentUsers) + users * user : parseInt(currentUsers) + users;
+    document.querySelectorAll("#viewers span")[0].innerHTML = currentUsers;
+  }
+</script>
+            
+            <br>             
             <!-- Botão 1 -->
             <div id="cta1" class="mt-4 d-none">
               <a href="https://pay.kiwify.com.br/OiGy5Xh?afid=8cVFRBNI" class="a-btn" style="text-decoration: none;">
@@ -73,6 +97,16 @@
         </div>
       </div>
     </header>
+    
+    <!--INÍCIO DO SCRIPT-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>$.get("https://ipinfo.io/json", function (response) { $("#address").html(response.city);
+}, "jsonp");
+</script>
+
+<!--FIM DO SCRIPT-->
 
     <section class="comments py-4">
       <div class="container">
@@ -95,7 +129,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td class="fb-comments-comment-text">Amei vou fazer hoje mesmo pois estou em processo de emagrecimento. Muito obrigada 😘</td>
+                      <td class="fb-comments-comment-text">Só digo uma coisa... FAÇAM! Vocês vão amar, já estou contando para todo mundo aqui de <span id="address" style="color:#000000;">Salvador</span>...   </td>
                     </tr>
                     <tr>
                       <td class="fb-comments-comment-actions">
